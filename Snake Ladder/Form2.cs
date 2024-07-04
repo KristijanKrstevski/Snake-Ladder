@@ -30,7 +30,7 @@ namespace Snake_Ladder
             pbPlayerTwo.Location = new Point(47, 394);
         }
 
-        private void btnRoll_Click(object sender, EventArgs e)
+        private async void btnRoll_Click(object sender, EventArgs e)
         {
             Random random = new Random();
             int RandomDiceNumber = random.Next(1, 7);
@@ -90,35 +90,36 @@ namespace Snake_Ladder
 
             if (playerTurn)
             {
+                if (PlayerOneLocation + RandomDiceNumber <= 29)
+                {
+                    int newLocation = PlayerOneLocation + RandomDiceNumber;
+                    PlayersLocationClass.PlayerOneMove(newLocation, pbPlayerOne);
+                    await Task.Delay(1000);
 
-                PlayerOneLocation += RandomDiceNumber;
-                if(PlayerOneLocation > 29)
-                {
-                    PlayerOneLocation -= RandomDiceNumber;
-                }
-                PlayersLocationClass.PlayerOneMove(PlayerOneLocation, pbPlayerOne);
-                PlayerOneLocation = HandleSnakesAndLadders(PlayerOneLocation, pbPlayerOne, true);
-                if (PlayerOneLocation == 29)
-                {
-                    PlayersLocationClass.PlayerOneMove(29, pbPlayerOne);
-                    MessageBox.Show("Player One Wins!");
-                    btnRoll.Enabled = false;
+                    PlayerOneLocation = HandleSnakesAndLadders(newLocation, pbPlayerOne, true);
+                    if (PlayerOneLocation == 29)
+                    {
+                        PlayersLocationClass.PlayerOneMove(29, pbPlayerOne);
+                        MessageBox.Show("Player One Wins!");
+                        btnRoll.Enabled = false;
+                    }
                 }
             }
             else
             {
-                PlayerTwoLocation += RandomDiceNumber;
-                if(PlayerTwoLocation>29)
+                if (PlayerTwoLocation + RandomDiceNumber <= 29)
                 {
-                    PlayerTwoLocation -= RandomDiceNumber;
-                }
-                PlayersLocationClass.PlayerTwoMove(PlayerTwoLocation, pbPlayerTwo);
-                PlayerTwoLocation = HandleSnakesAndLadders(PlayerTwoLocation, pbPlayerTwo, false);
-                if (PlayerTwoLocation == 29)
-                {
-                    PlayersLocationClass.PlayerTwoMove(29, pbPlayerTwo);
-                    MessageBox.Show("Player Two Wins!");
-                    btnRoll.Enabled = false;
+                    int newLocation = PlayerTwoLocation + RandomDiceNumber;
+                    PlayersLocationClass.PlayerTwoMove(newLocation, pbPlayerTwo);
+                    await Task.Delay(1000);
+
+                    PlayerTwoLocation = HandleSnakesAndLadders(newLocation, pbPlayerTwo, false);
+                    if (PlayerTwoLocation == 29)
+                    {
+                        PlayersLocationClass.PlayerTwoMove(29, pbPlayerTwo);
+                        MessageBox.Show("Player Two Wins!");
+                        btnRoll.Enabled = false;
+                    }
                 }
             }
         }
@@ -126,11 +127,11 @@ namespace Snake_Ladder
         private int HandleSnakesAndLadders(int playerLocation, PictureBox playerPictureBox, bool isPlayerOne)
         {
             // Snakes
-            if (playerLocation == 16) playerLocation = 2;
+            if (playerLocation == 16) playerLocation = 3;
             else if (playerLocation == 18) playerLocation = 6;
             else if (playerLocation == 20) playerLocation = 8;
             else if (playerLocation == 24) playerLocation = 12;
-            else if (playerLocation == 26) playerLocation = 12;
+            else if (playerLocation == 26) playerLocation = 1;
 
             // Ladders
             else if (playerLocation == 2) playerLocation = 15;
