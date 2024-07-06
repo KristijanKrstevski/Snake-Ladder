@@ -43,13 +43,14 @@
             // 
             // btnStart
             // 
+            btnStart.BackColor = Color.FromArgb(  255,   255,   128);
             btnStart.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point,  0);
             btnStart.Location = new Point(249, 171);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(185, 56);
             btnStart.TabIndex = 0;
             btnStart.Text = "START";
-            btnStart.UseVisualStyleBackColor = true;
+            btnStart.UseVisualStyleBackColor = false;
             btnStart.Click += btnStart_Click;
             // 
             // tbPlayer1
@@ -106,13 +107,14 @@
             // 
             // btnHowToPlay
             // 
-            btnHowToPlay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point,  0);
-            btnHowToPlay.Location = new Point(280, 233);
+            btnHowToPlay.BackColor = Color.FromArgb(  255,   255,   128);
+            btnHowToPlay.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point,  0);
+            btnHowToPlay.Location = new Point(287, 233);
             btnHowToPlay.Name = "btnHowToPlay";
-            btnHowToPlay.Size = new Size(125, 45);
+            btnHowToPlay.Size = new Size(114, 29);
             btnHowToPlay.TabIndex = 6;
             btnHowToPlay.Text = "HOW TO PLAY";
-            btnHowToPlay.UseVisualStyleBackColor = true;
+            btnHowToPlay.UseVisualStyleBackColor = false;
             btnHowToPlay.Click += btnHowToPlay_Click;
             // 
             // FormWelocome

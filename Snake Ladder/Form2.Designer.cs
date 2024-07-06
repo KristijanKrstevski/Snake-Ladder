@@ -42,6 +42,8 @@
             label2 = new Label();
             label1 = new Label();
             btnRoll = new Button();
+            btnReset = new Button();
+            btnClose = new Button();
             ((System.ComponentModel.ISupportInitialize) pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize) pbDiceOne).BeginInit();
             ((System.ComponentModel.ISupportInitialize) pbDiceTwo).BeginInit();
@@ -57,7 +59,7 @@
             // 
             lblPlayer1.AutoSize = true;
             lblPlayer1.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point,  0);
-            lblPlayer1.Location = new Point(680, 81);
+            lblPlayer1.Location = new Point(680, 32);
             lblPlayer1.Name = "lblPlayer1";
             lblPlayer1.Size = new Size(55, 23);
             lblPlayer1.TabIndex = 0;
@@ -67,7 +69,7 @@
             // 
             lblPlayer2.AutoSize = true;
             lblPlayer2.Font = new Font("Segoe UI", 13F);
-            lblPlayer2.Location = new Point(680, 129);
+            lblPlayer2.Location = new Point(676, 81);
             lblPlayer2.Name = "lblPlayer2";
             lblPlayer2.Size = new Size(59, 25);
             lblPlayer2.TabIndex = 1;
@@ -85,9 +87,10 @@
             // 
             // pbDiceOne
             // 
+            pbDiceOne.BackColor = Color.Transparent;
             pbDiceOne.BackgroundImage = Properties.Resources._1;
             pbDiceOne.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDiceOne.Location = new Point(589, 268);
+            pbDiceOne.Location = new Point(585, 202);
             pbDiceOne.Name = "pbDiceOne";
             pbDiceOne.Size = new Size(150, 150);
             pbDiceOne.TabIndex = 3;
@@ -95,9 +98,10 @@
             // 
             // pbDiceTwo
             // 
+            pbDiceTwo.BackColor = Color.Transparent;
             pbDiceTwo.BackgroundImage = Properties.Resources._2;
             pbDiceTwo.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDiceTwo.Location = new Point(589, 268);
+            pbDiceTwo.Location = new Point(585, 202);
             pbDiceTwo.Name = "pbDiceTwo";
             pbDiceTwo.Size = new Size(150, 150);
             pbDiceTwo.TabIndex = 4;
@@ -105,9 +109,10 @@
             // 
             // pbDiceThree
             // 
+            pbDiceThree.BackColor = Color.Transparent;
             pbDiceThree.BackgroundImage = Properties.Resources._3;
             pbDiceThree.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDiceThree.Location = new Point(589, 268);
+            pbDiceThree.Location = new Point(585, 202);
             pbDiceThree.Name = "pbDiceThree";
             pbDiceThree.Size = new Size(150, 150);
             pbDiceThree.TabIndex = 5;
@@ -115,9 +120,10 @@
             // 
             // pbDiceFour
             // 
+            pbDiceFour.BackColor = Color.Transparent;
             pbDiceFour.BackgroundImage = Properties.Resources._4;
             pbDiceFour.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDiceFour.Location = new Point(589, 268);
+            pbDiceFour.Location = new Point(585, 202);
             pbDiceFour.Name = "pbDiceFour";
             pbDiceFour.Size = new Size(150, 150);
             pbDiceFour.TabIndex = 6;
@@ -125,9 +131,10 @@
             // 
             // pbDiceFive
             // 
+            pbDiceFive.BackColor = Color.Transparent;
             pbDiceFive.BackgroundImage = Properties.Resources._5;
             pbDiceFive.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDiceFive.Location = new Point(589, 268);
+            pbDiceFive.Location = new Point(585, 202);
             pbDiceFive.Name = "pbDiceFive";
             pbDiceFive.Size = new Size(150, 150);
             pbDiceFive.TabIndex = 7;
@@ -138,7 +145,7 @@
             pbDiceSix.BackColor = Color.Transparent;
             pbDiceSix.BackgroundImage = Properties.Resources._6;
             pbDiceSix.BackgroundImageLayout = ImageLayout.Stretch;
-            pbDiceSix.Location = new Point(589, 268);
+            pbDiceSix.Location = new Point(585, 202);
             pbDiceSix.Name = "pbDiceSix";
             pbDiceSix.Size = new Size(150, 150);
             pbDiceSix.TabIndex = 8;
@@ -167,7 +174,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Red;
             label2.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            label2.Location = new Point(570, 129);
+            label2.Location = new Point(569, 81);
             label2.Name = "label2";
             label2.Size = new Size(105, 25);
             label2.TabIndex = 12;
@@ -179,7 +186,7 @@
             label1.BackColor = Color.Blue;
             label1.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(570, 81);
+            label1.Location = new Point(570, 30);
             label1.Name = "label1";
             label1.Size = new Size(105, 25);
             label1.TabIndex = 11;
@@ -189,13 +196,37 @@
             // 
             btnRoll.BackColor = Color.MediumSpringGreen;
             btnRoll.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            btnRoll.Location = new Point(610, 184);
+            btnRoll.Location = new Point(608, 125);
             btnRoll.Name = "btnRoll";
             btnRoll.Size = new Size(106, 59);
             btnRoll.TabIndex = 13;
             btnRoll.Text = "ROLL";
             btnRoll.UseVisualStyleBackColor = false;
             btnRoll.Click += btnRoll_Click;
+            // 
+            // btnReset
+            // 
+            btnReset.BackColor = Color.FromArgb(  255,   255,   128);
+            btnReset.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point,  0);
+            btnReset.Location = new Point(569, 376);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(96, 39);
+            btnReset.TabIndex = 14;
+            btnReset.Text = "RESET";
+            btnReset.UseVisualStyleBackColor = false;
+            btnReset.Click += btnReset_Click;
+            // 
+            // btnClose
+            // 
+            btnClose.BackColor = Color.FromArgb(  255,   128,   128);
+            btnClose.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point,  0);
+            btnClose.Location = new Point(671, 376);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(96, 39);
+            btnClose.TabIndex = 15;
+            btnClose.Text = "CLOSE";
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // FormGame
             // 
@@ -204,6 +235,8 @@
             BackgroundImage = Properties.Resources.game_background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnClose);
+            Controls.Add(btnReset);
             Controls.Add(btnRoll);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -252,5 +285,7 @@
         private Label label2;
         private Label label1;
         private Button btnRoll;
+        private Button btnReset;
+        private Button btnClose;
     }
 }

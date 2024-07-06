@@ -10,8 +10,7 @@ using System.Windows.Forms;
 
 namespace Snake_Ladder
 {
-    public partial class FormGame : Form
-    {
+    public partial class FormGame : Form {
         public int DiceNumber = 0;
         public int PlayerOneLocation = 0;
         public int PlayerTwoLocation = 0;
@@ -19,23 +18,19 @@ namespace Snake_Ladder
         public bool playerTurn = false;
         public int playerCounter = 1;
 
-        public FormGame()
-        {
+        public FormGame() {
             InitializeComponent();
         }
 
-        private void FormGame_Load(object sender, EventArgs e)
-        {
+        private void FormGame_Load(object sender, EventArgs e) {
             pbPlayerOne.Location = new Point(47, 358);
             pbPlayerTwo.Location = new Point(47, 394);
         }
 
-        private async void btnRoll_Click(object sender, EventArgs e)
-        {
+        private async void btnRoll_Click(object sender, EventArgs e) {
             Random random = new Random();
             int RandomDiceNumber = random.Next(1, 7);
-            switch (RandomDiceNumber)
-            {
+            switch (RandomDiceNumber) {
                 case 1:
                     pbDiceOne.Visible = true;
                     pbDiceTwo.Visible = false;
@@ -142,31 +137,44 @@ namespace Snake_Ladder
             btnRoll.Enabled = true;
         }
 
-        private int HandleSnakesAndLadders(int playerLocation, PictureBox playerPictureBox, bool isPlayerOne)
-        {
+        private int HandleSnakesAndLadders(int playerLocation, PictureBox playerPictureBox, bool isPlayerOne) {
             // Snakes
-            if (playerLocation == 16) playerLocation = 3;
-            else if (playerLocation == 18) playerLocation = 6;
-            else if (playerLocation == 20) playerLocation = 8;
-            else if (playerLocation == 24) playerLocation = 12;
-            else if (playerLocation == 26) playerLocation = 1;
+            if (playerLocation == 16)
+                playerLocation = 3;
+            else if (playerLocation == 18)
+                playerLocation = 6;
+            else if (playerLocation == 20)
+                playerLocation = 8;
+            else if (playerLocation == 24)
+                playerLocation = 12;
+            else if (playerLocation == 26)
+                playerLocation = 1;
 
             // Ladders
-            else if (playerLocation == 2) playerLocation = 15;
-            else if (playerLocation == 4) playerLocation = 7;
-            else if (playerLocation == 10) playerLocation = 25;
-            else if (playerLocation == 19) playerLocation = 28;
+            else if (playerLocation == 2)
+                playerLocation = 15;
+            else if (playerLocation == 4)
+                playerLocation = 7;
+            else if (playerLocation == 10)
+                playerLocation = 25;
+            else if (playerLocation == 19)
+                playerLocation = 28;
 
-            if (isPlayerOne)
-            {
+            if (isPlayerOne) {
                 PlayersLocationClass.PlayerOneMove(playerLocation, playerPictureBox);
-            }
-            else
-            {
+            } else {
                 PlayersLocationClass.PlayerTwoMove(playerLocation, playerPictureBox);
             }
 
             return playerLocation;
+        }
+
+        private void btnReset_Click(object sender, EventArgs e) {
+            ResetGame();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }
