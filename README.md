@@ -12,9 +12,7 @@
 Оваа класа има 2 методи која ја обележува секоја точка на движење на табелата. Направена е со <b>switch case</b> поради тоа што се повеќе улови и <b>if else</b> би било понапорно.
 ### 3.1.1 PlayerOne
 ```
-public class PlayersLocationClass
-    {
-        public static void PlayerOneMove(int PlayerLocation, PictureBox pbPlayerOne)
+public static void PlayerOneMove(int PlayerLocation, PictureBox pbPlayerOne)
         {
             switch (PlayerLocation)
             {
@@ -109,7 +107,102 @@ public class PlayersLocationClass
         }
 ```
 ### 3.1.2 PlayerTwo
+```
+public static void PlayerTwoMove(int PlayerLocation, PictureBox pbPlayerTwo)
+        {
+            switch (PlayerLocation)
+            {
+                case 1:
+                    pbPlayerTwo.Location = new Point(128, 388);
+                    break;
+                case 2:
+                    pbPlayerTwo.Location = new Point(211, 388);
+                    break;
+                case 3:
+                    pbPlayerTwo.Location = new Point(285, 388);
+                    break;
+                case 4:
+                    pbPlayerTwo.Location = new Point(412, 401);
+                    break;
+                case 5:
+                    pbPlayerTwo.Location = new Point(450, 401);
+                    break;
+                case 6:
+                    pbPlayerTwo.Location = new Point(485, 317);
+                    break;
+                case 7:
+                    pbPlayerTwo.Location = new Point(400, 310);
+                    break;
+                case 8:
+                    pbPlayerTwo.Location = new Point(332, 317);
+                    break;
+                case 9:
+                    pbPlayerTwo.Location = new Point(246, 312);
+                    break;
+                case 10:
+                    pbPlayerTwo.Location = new Point(160, 313);
+                    break;
+                case 11:
+                    pbPlayerTwo.Location = new Point(83, 318);
+                    break;
+                case 12:
+                    pbPlayerTwo.Location = new Point(50, 233);
+                    break;
+                case 13:
+                    pbPlayerTwo.Location = new Point(125, 231);
+                    break;
+                case 14:
+                    pbPlayerTwo.Location = new Point(202, 236);
+                    break;
+                case 15:
+                    pbPlayerTwo.Location = new Point(293, 232);
+                    break;
+                case 16:
+                    pbPlayerTwo.Location = new Point(368, 232);
+                    break;
+                case 17:
+                    pbPlayerTwo.Location = new Point(450, 234);
+                    break;
+                case 18:
+                    pbPlayerTwo.Location = new Point(450, 151);
+                    break;
+                case 19:
+                    pbPlayerTwo.Location = new Point(373, 148);
+                    break;
+                case 20:
+                    pbPlayerTwo.Location = new Point(330, 152);
+                    break;
+                case 21:
+                    pbPlayerTwo.Location = new Point(244, 152);
+                    break;
+                case 22:
+                    pbPlayerTwo.Location = new Point(158, 150);
+                    break;
+                case 23:
+                    pbPlayerTwo.Location = new Point(87, 149);
+                    break;
+                case 24:
+                    pbPlayerTwo.Location = new Point(55, 65);
+                    break;
+                case 25:
+                    pbPlayerTwo.Location = new Point(133, 65);
+                    break;
+                case 26:
+                    pbPlayerTwo.Location = new Point(202, 65);
+                    break;
+                case 27:
+                    pbPlayerTwo.Location = new Point(304, 76);
+                    break;
+                case 28:
+                    pbPlayerTwo.Location = new Point(381, 67);
+                    break;
+                case 29:
+                    pbPlayerTwo.Location = new Point(450, 76);
+                    break;
 
+            }
+        }
+```
 ## 3.2 Form1.cs
 
 ## 3.3 Form2.cs
