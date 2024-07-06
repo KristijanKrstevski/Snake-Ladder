@@ -90,6 +90,7 @@ public static void PlayerTwoMove(int PlayerLocation, PictureBox pbPlayerTwo)
         </li>
 </ul>
 Како што спомнавме, за да се започне игра <b>textbox</b> полињата мора да се пополните, и за справување на тој проблем, поставен е <b>error provider</b> кој не дозволува да е празно полето.
+
 ## 3.3 Form2.cs
 
 ## 3.4 Form3.cs
