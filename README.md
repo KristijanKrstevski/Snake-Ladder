@@ -84,3 +84,4 @@ public static void PlayerTwoMove(int PlayerLocation, PictureBox pbPlayerTwo)
 ## 3.4 Form3.cs
 
 ## 4. Version Control
+За контрола на верзија користевме Git, и проектот е прикачен на Github за лесен пристап до него. За изработка на проектот сите се поделивме одреден дел и работевме само во <b>master</b> гранка за да немаме никакви конфликти и проблеми. 
