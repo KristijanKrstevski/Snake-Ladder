@@ -79,7 +79,9 @@ public static void PlayerTwoMove(int PlayerLocation, PictureBox pbPlayerTwo)
 ```
 ## 3.2 Form1.cs
 Оааа форма е главната почетна форма која има улога како мени.
+
 ![Alt text]()
+
 Насловот е едноставна <b>.png слика</b> и одма под насловот има 2 копчиња:
 <ul>
         <li>
