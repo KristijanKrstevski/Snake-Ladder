@@ -26,8 +26,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGame));
             lblPlayer1 = new Label();
             lblPlayer2 = new Label();
             pictureBox1 = new PictureBox();
@@ -42,24 +42,24 @@
             label2 = new Label();
             label1 = new Label();
             btnRoll = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDiceOne).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDiceTwo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDiceThree).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDiceFour).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDiceFive).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDiceSix).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbPlayerOne).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbPlayerTwo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) pbDiceOne).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) pbDiceTwo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) pbDiceThree).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) pbDiceFour).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) pbDiceFive).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) pbDiceSix).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) pbPlayerOne).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) pbPlayerTwo).BeginInit();
             SuspendLayout();
             // 
             // lblPlayer1
             // 
             lblPlayer1.AutoSize = true;
-            lblPlayer1.Font = new Font("Segoe UI", 13F);
+            lblPlayer1.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point,  0);
             lblPlayer1.Location = new Point(680, 81);
             lblPlayer1.Name = "lblPlayer1";
-            lblPlayer1.Size = new Size(59, 25);
+            lblPlayer1.Size = new Size(55, 23);
             lblPlayer1.TabIndex = 0;
             lblPlayer1.Text = "label1";
             // 
@@ -135,6 +135,7 @@
             // 
             // pbDiceSix
             // 
+            pbDiceSix.BackColor = Color.Transparent;
             pbDiceSix.BackgroundImage = Properties.Resources._6;
             pbDiceSix.BackgroundImageLayout = ImageLayout.Stretch;
             pbDiceSix.Location = new Point(589, 268);
@@ -177,6 +178,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Blue;
             label1.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(570, 81);
             label1.Name = "label1";
             label1.Size = new Size(105, 25);
@@ -217,18 +219,19 @@
             Controls.Add(lblPlayer2);
             Controls.Add(lblPlayer1);
             DoubleBuffered = true;
+            Icon = (Icon) resources.GetObject("$this.Icon");
             Name = "FormGame";
-            Text = "Form2";
+            Text = "Snakes and Ladders";
             Load += FormGame_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDiceOne).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDiceTwo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDiceThree).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDiceFour).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDiceFive).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDiceSix).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbPlayerOne).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbPlayerTwo).EndInit();
+            ((System.ComponentModel.ISupportInitialize) pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize) pbDiceOne).EndInit();
+            ((System.ComponentModel.ISupportInitialize) pbDiceTwo).EndInit();
+            ((System.ComponentModel.ISupportInitialize) pbDiceThree).EndInit();
+            ((System.ComponentModel.ISupportInitialize) pbDiceFour).EndInit();
+            ((System.ComponentModel.ISupportInitialize) pbDiceFive).EndInit();
+            ((System.ComponentModel.ISupportInitialize) pbDiceSix).EndInit();
+            ((System.ComponentModel.ISupportInitialize) pbPlayerOne).EndInit();
+            ((System.ComponentModel.ISupportInitialize) pbPlayerTwo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

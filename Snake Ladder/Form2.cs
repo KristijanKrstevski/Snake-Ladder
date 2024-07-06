@@ -17,7 +17,7 @@ namespace Snake_Ladder
         public int PlayerTwoLocation = 0;
 
         public bool playerTurn = false;
-        public int playerCounter = 0;
+        public int playerCounter = 1;
 
         public FormGame()
         {
@@ -88,40 +88,58 @@ namespace Snake_Ladder
             playerCounter++;
             playerTurn = playerCounter % 2 == 0;
 
-            if (playerTurn)
-            {
-                if (PlayerOneLocation + RandomDiceNumber <= 29)
-                {
+            if (playerTurn) {
+                if (PlayerOneLocation + RandomDiceNumber <= 29) {
                     int newLocation = PlayerOneLocation + RandomDiceNumber;
                     PlayersLocationClass.PlayerOneMove(newLocation, pbPlayerOne);
                     await Task.Delay(1000);
 
                     PlayerOneLocation = HandleSnakesAndLadders(newLocation, pbPlayerOne, true);
-                    if (PlayerOneLocation == 29)
-                    {
+                    if (PlayerOneLocation == 29) {
                         PlayersLocationClass.PlayerOneMove(29, pbPlayerOne);
                         MessageBox.Show("Player One Wins!");
                         btnRoll.Enabled = false;
+                        PromptPlayAgain();
                     }
                 }
-            }
-            else
-            {
-                if (PlayerTwoLocation + RandomDiceNumber <= 29)
-                {
+            } else {
+                if (PlayerTwoLocation + RandomDiceNumber <= 29) {
                     int newLocation = PlayerTwoLocation + RandomDiceNumber;
                     PlayersLocationClass.PlayerTwoMove(newLocation, pbPlayerTwo);
                     await Task.Delay(1000);
 
                     PlayerTwoLocation = HandleSnakesAndLadders(newLocation, pbPlayerTwo, false);
-                    if (PlayerTwoLocation == 29)
-                    {
+                    if (PlayerTwoLocation == 29) {
                         PlayersLocationClass.PlayerTwoMove(29, pbPlayerTwo);
                         MessageBox.Show("Player Two Wins!");
                         btnRoll.Enabled = false;
+                        PromptPlayAgain();
                     }
                 }
             }
+        }
+
+        private void PromptPlayAgain() {
+            var result = MessageBox.Show("Do you want to play again?", "Play Again?", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes) {
+                ResetGame();
+            } else {
+                this.Close();
+            }
+        }
+
+        private void ResetGame() {
+            pbPlayerOne.Location = new Point(47, 358);
+            pbPlayerTwo.Location = new Point(47, 394);
+            PlayerOneLocation = 0;
+            PlayerTwoLocation = 0;
+            playerTurn = true;
+
+            PlayersLocationClass.PlayerOneMove(PlayerOneLocation, pbPlayerOne);
+            PlayersLocationClass.PlayerTwoMove(PlayerTwoLocation, pbPlayerTwo);
+
+            btnRoll.Enabled = true;
         }
 
         private int HandleSnakesAndLadders(int playerLocation, PictureBox playerPictureBox, bool isPlayerOne)
