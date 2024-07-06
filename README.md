@@ -11,7 +11,8 @@
 ## 3.1 PlayersLocationClass.cs
 Оваа класа има 2 методи која ја обележува секоја точка на движење на табелата. Направена е со <b>switch case</b> поради тоа што се повеќе улови и <b>if else</b> би било понапорно.
 ### 3.1.1 PlayerOne
-` public class PlayersLocationClass
+```
+public class PlayersLocationClass
     {
         public static void PlayerOneMove(int PlayerLocation, PictureBox pbPlayerOne)
         {
@@ -105,7 +106,8 @@
                     pbPlayerOne.Location = new Point(450, 25);
                     break;
             }
-        }`
+        }
+```
 ### 3.1.2 PlayerTwo
 
 ## 3.2 Form1.cs
