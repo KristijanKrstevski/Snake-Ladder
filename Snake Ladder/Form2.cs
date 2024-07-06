@@ -129,9 +129,10 @@ namespace Snake_Ladder
             pbPlayerTwo.Location = new Point(47, 394);
             PlayerOneLocation = 0;
             PlayerTwoLocation = 0;
-            playerTurn = true;
 
-            PlayersLocationClass.PlayerOneMove(PlayerOneLocation, pbPlayerOne);
+            playerTurn = false;
+            playerCounter = 1;
+        PlayersLocationClass.PlayerOneMove(PlayerOneLocation, pbPlayerOne);
             PlayersLocationClass.PlayerTwoMove(PlayerTwoLocation, pbPlayerTwo);
 
             btnRoll.Enabled = true;

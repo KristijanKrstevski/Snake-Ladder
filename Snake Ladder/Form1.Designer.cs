@@ -26,7 +26,8 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWelocome));
             btnStart = new Button();
@@ -37,14 +38,14 @@
             pictureBox1 = new PictureBox();
             errorProvider1 = new ErrorProvider(components);
             btnHowToPlay = new Button();
-            ((System.ComponentModel.ISupportInitialize) pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) errorProvider1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // btnStart
             // 
-            btnStart.BackColor = Color.FromArgb(  255,   255,   128);
-            btnStart.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point,  0);
+            btnStart.BackColor = Color.FromArgb(255, 255, 128);
+            btnStart.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStart.Location = new Point(249, 171);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(185, 56);
@@ -73,10 +74,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Blue;
+            label1.Font = new Font("Segoe UI", 11F);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(202, 292);
+            label1.Location = new Point(197, 287);
             label1.Name = "label1";
-            label1.Size = new Size(61, 15);
+            label1.Size = new Size(76, 20);
             label1.TabIndex = 3;
             label1.Text = "PlayerOne";
             // 
@@ -84,10 +86,11 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Red;
+            label2.Font = new Font("Segoe UI", 11F);
             label2.ForeColor = SystemColors.ControlText;
-            label2.Location = new Point(435, 292);
+            label2.Location = new Point(428, 287);
             label2.Name = "label2";
-            label2.Size = new Size(60, 15);
+            label2.Size = new Size(76, 20);
             label2.TabIndex = 4;
             label2.Text = "PlayerTwo";
             // 
@@ -107,8 +110,8 @@
             // 
             // btnHowToPlay
             // 
-            btnHowToPlay.BackColor = Color.FromArgb(  255,   255,   128);
-            btnHowToPlay.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point,  0);
+            btnHowToPlay.BackColor = Color.FromArgb(255, 255, 128);
+            btnHowToPlay.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnHowToPlay.Location = new Point(287, 233);
             btnHowToPlay.Name = "btnHowToPlay";
             btnHowToPlay.Size = new Size(114, 29);
@@ -131,12 +134,12 @@
             Controls.Add(tbPlayer2);
             Controls.Add(tbPlayer1);
             Controls.Add(btnStart);
-            Icon = (Icon) resources.GetObject("$this.Icon");
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormWelocome";
             Text = "Menu";
             Load += FormWelocome_Load;
-            ((System.ComponentModel.ISupportInitialize) pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize) errorProvider1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
