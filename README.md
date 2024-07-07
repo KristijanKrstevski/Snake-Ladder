@@ -93,6 +93,7 @@ public static void PlayerTwoMove(int PlayerLocation, PictureBox pbPlayerTwo)
 </ul>
 Како што спомнавме, за да се започне игра <b>textbox</b> полињата мора да се пополните, и за справување на тој проблем, поставен е <b>error provider</b> кој не дозволува да е празно полето.
 <br/>
+
 ## 3.3 Form2.cs
 Оваа форма е самата игра Snakes and Ladders. 
 
@@ -107,6 +108,7 @@ public static void PlayerTwoMove(int PlayerLocation, PictureBox pbPlayerTwo)
                 <b>BACK</b> - При клик на ова копче се исклучува играта и се враќате на <b>Form1</b>
         </li>
 </ul>
+
 ## 3.4 Form3.cs
 
 ## 4. Version Control
