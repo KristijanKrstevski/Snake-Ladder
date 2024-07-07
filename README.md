@@ -80,15 +80,15 @@ public static void PlayerTwoMove(int PlayerLocation, PictureBox pbPlayerTwo)
 ## 3.2 Form1.cs
 Оааа форма е главната почетна форма која има улога како мени.
 
-![Alt text](![image](https://github.com/KFilip123/Snake-Ladder/assets/167019790/a8ecbad4-43c9-4f9d-b95e-78ec91418dc1)
+![Alt text](https://github.com/KFilip123/Snake-Ladder/blob/master/Snake%20Ladder/Resources/SS1.png)
 
 Насловот е едноставна <b>.png слика</b> и одма под насловот има 2 копчиња:
 <ul>
         <li>
-                <b>START</b> - При клик на ова копче се уклучува <a>Form2</a> кој ве упатува кон главната игра. 
+                <b>START</b> - При клик на ова копче се уклучува <b>Form2</b> кој ве упатува кон главната игра. 
         </li>
         <li>
-                <b>HOW TO PLAY</b> - При клик на ова копче се појавува <a>Form3</a> кој е упатство за играње слично на веќе напишаното
+                <b>HOW TO PLAY</b> - При клик на ова копче се појавува <b>Form3</b> кој е упатство за играње слично на веќе напишаното
         </li>
 </ul>
 Како што спомнавме, за да се започне игра <b>textbox</b> полињата мора да се пополните, и за справување на тој проблем, поставен е <b>error provider</b> кој не дозволува да е празно полето.
@@ -97,7 +97,7 @@ public static void PlayerTwoMove(int PlayerLocation, PictureBox pbPlayerTwo)
 ## 3.3 Form2.cs
 Оваа форма е самата игра Snakes and Ladders. 
 
-![Alt text]()
+![Alt text](https://github.com/KFilip123/Snake-Ladder/blob/master/Snake%20Ladder/Resources/SS3.png)
 
 Голем дел од формата е табелата за играње на која има 30 полиња. Играчите почнуваат на поле 1 и победува првиот играч што ќе стигне до поле 30. Од десната страна ќе ги забележите имињата на играчите, коцката и 2 копчиња:
 <ul>
@@ -112,7 +112,7 @@ public static void PlayerTwoMove(int PlayerLocation, PictureBox pbPlayerTwo)
 ## 3.4 Form3.cs
 Последната форма, <b>Form3</b>, се користи за да ги излистаме правилата на играта и како се игра.
 
-![Alt text]()
+![Alt text](https://github.com/KFilip123/Snake-Ladder/blob/master/Snake%20Ladder/Resources/SS2.png)
 
 Оваа форма е доста едноставна, и е составена од:
 <ul>
