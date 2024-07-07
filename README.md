@@ -80,7 +80,7 @@ public static void PlayerTwoMove(int PlayerLocation, PictureBox pbPlayerTwo)
 ## 3.2 Form1.cs
 Оааа форма е главната почетна форма која има улога како мени.
 
-![Alt text]()
+![Alt text](![image](https://github.com/KFilip123/Snake-Ladder/assets/167019790/a8ecbad4-43c9-4f9d-b95e-78ec91418dc1)
 
 Насловот е едноставна <b>.png слика</b> и одма под насловот има 2 копчиња:
 <ul>
